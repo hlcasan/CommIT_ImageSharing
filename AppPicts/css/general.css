@@ -19,6 +19,7 @@ section.hide {
     background-size: cover;
     width: 15em;
     height: 15em;
+    cursor: zoom-in;
 }
 
 .thumbnail div {
