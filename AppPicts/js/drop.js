@@ -12,6 +12,7 @@ Dropzone.options.myDropzone = {
             setup_form(file.xhr.responseText);  //Setup the form (see below)
         });
     },
+    capture: "camera",
     acceptedFiles: ".jpg,.png,.gif"  //Limit the files to images
 };
 
