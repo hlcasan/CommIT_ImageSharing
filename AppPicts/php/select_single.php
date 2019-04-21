@@ -9,7 +9,10 @@ error_reporting(E_ALL);
 
 if ($dbi) {
 
-    $q = "SELECT id,title,src,caption,userId FROM MMGramIMAGES WHERE id = ?";
+    $q = "SELECT MMGramIMAGES.id,MMGramIMAGES.title,MMGramIMAGES.src,MMGramIMAGES.caption,MMGramIMAGES.userId, MMGramUSERS.username 
+        FROM MMGramIMAGES
+        JOIN MMGramUSERS ON MMGramIMAGES.userId = MMGramUSERS.id
+        WHERE MMGramIMAGES.id = ?";
 
     // Array to translate to json
     $rArray = array();
@@ -22,7 +25,7 @@ if ($dbi) {
         //Prepare output
         $stmt->execute();
         $stmt->store_result();
-        $stmt->bind_result($rId,$rTitle,$rSrc,$rCaption,$rUserId);
+        $stmt->bind_result($rId,$rTitle,$rSrc,$rCaption,$rUserId,$rUsername);
 
         //Collect results
         while($stmt->fetch()) {
@@ -31,7 +34,8 @@ if ($dbi) {
                 "title"=>$rTitle,
                 "src"=>$rSrc,
                 "caption"=>$rCaption,
-                "userId"=>$rUserId
+                "userId"=>$rUserId,
+                "username"=>$rUsername
             ];
         }
         

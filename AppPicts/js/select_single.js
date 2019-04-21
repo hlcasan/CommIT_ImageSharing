@@ -46,7 +46,10 @@ var select_single = function (imageId) {
 			//Prepare the image section
 			let imageSECTION = document.createElement('section');
 
-			let imageTitle = document.createElement('h4');
+			let imageUsername = document.createElement("h4");
+			imageUsername.innerHTML = itemRaw[0].username;
+
+			let imageTitle = document.createElement('p');
 			imageTitle.innerHTML = itemRaw[0].title;
 
 			let imageCaption = document.createElement('p');
@@ -57,6 +60,7 @@ var select_single = function (imageId) {
 
 			//Drop image elements in the image section
 			imageSECTION.appendChild(imageTag);
+			imageSECTION.appendChild(imageUsername);
 			imageSECTION.appendChild(imageTitle);
 			imageSECTION.appendChild(imageCaption);
 

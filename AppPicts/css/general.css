@@ -71,12 +71,13 @@ section.hide {
     display: inline;
     line-height: 1.3em;
 }
-.modal section div div p:nth-child(1) {
+.modal section div div p:nth-child(1) , .modal section h4 {
     padding: 0.2em;
     background: black;
     color: white;
     font-weight: bold;
     margin-right: 0.5em;
+    text-align: center;
 }
 
 .modal .closeBttn {
