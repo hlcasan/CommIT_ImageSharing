@@ -28,6 +28,9 @@ const resetUI = function() {
         //Reset the greeting to "Welcome Guest"
         document.getElementById("greeting").firstElementChild.innerHTML = "Welcome Guest";
     }
+    
+    //Refresh the gallery
+    select_images();
 };
 
 //Initial call

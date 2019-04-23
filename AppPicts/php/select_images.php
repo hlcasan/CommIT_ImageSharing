@@ -9,8 +9,6 @@ error_reporting(E_ALL);
 
 if ($dbi) {
     // SQL query
-    //$q = "SELECT id,alias FROM chat_users";
-    // EXCLUDE CURRENT USER
     $q = "SELECT id,title,src,caption,userId FROM MMGramIMAGES ORDER BY t DESC";
 
     // Array to translate to json

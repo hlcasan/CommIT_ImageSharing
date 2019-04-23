@@ -28,8 +28,6 @@ const login = function() {
             //console.log('readyState: ' + xhr.readyState);
             //console.log('status: ' + xhr.status);
             if (xhr.readyState == 4 && xhr.status == 200) {
-                itemRaw = JSON.parse(xhr.responseText);
-
                 //Get the user details
                 itemRaw = JSON.parse(xhr.responseText);
                 //console.log(itemRaw); // print response

@@ -95,8 +95,6 @@ const insert_image = function () {
                 // Everything ok, get the response
                 //console.log(xhr.responseText);
 
-                // Update the messages
-                //select_messages();
                 console.log("image added");
 
                 window.location.href = "index.html";
