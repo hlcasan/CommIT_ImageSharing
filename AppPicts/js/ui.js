@@ -15,6 +15,16 @@ const resetUI = function() {
         //Update the greeting with the username
         document.getElementById("greeting").firstElementChild.innerHTML =
             "Welcome " + window.localStorage.getItem("username");
+            
+        let logout = document.createElement("div");
+        logout.classList.add("logout");
+        logout.innerHTML = "logout";
+        logout.addEventListener("click", function () {
+        	window.localStorage.removeItem("userId");
+        	window.localStorage.removeItem("username");
+        	window.location.href = "index.html";
+        })
+        document.getElementById("greeting").appendChild(logout);
     }
     else {
         //We are a guest

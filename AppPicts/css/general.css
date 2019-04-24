@@ -110,3 +110,14 @@ section.hide {
     padding: 1em;
 
 }
+
+.logout {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0.5em;
+	border: solid black 1px;
+}
+.logout:hover {
+	background: black;
+	color: white;
+}
