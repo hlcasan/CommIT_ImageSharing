@@ -14,6 +14,8 @@ if (!empty($_FILES)) {
     //Cleanup the file name: remove spaces, remove dots (except the last one)
     $newFile = preg_replace("/\s/","",$_FILES['file']['name']);
     $newFile = preg_replace("/\.(?=.*\.)/","",$newFile);
+    
+    $newFile = rand() . "_" . $newFile;
 
     //The name and location of the file to save on the server
     $targetFile =  dirname(dirname( __FILE__ )) . $store . $newFile;
