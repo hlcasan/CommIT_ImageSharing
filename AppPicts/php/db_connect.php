@@ -6,8 +6,8 @@
 
 //Connection Information
 $host = "localhost";  // always this value
-$user = "1111111";    // your student id
-$pass = "ostmh";      // your password
+$user = "*****";    // your student id
+$pass = "*****";      // your password
 $db = "db1111111";    // your database
 
 //Establish connection: host, user, password, database
