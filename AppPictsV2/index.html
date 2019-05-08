@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Image App (SPA) Sample</title>
+
+    <!-- Font from Google -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+
+    <!-- FontAwesome Library of icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Dropzone.js Library for the upload interface -->
+    <script src="js/dropzone.min.js"></script>
+    <link rel="stylesheet" href="css/dropzone.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/general.css">
+
+</head>
+
+<body>
+<div id="wrapper">
+    <header>
+        <h1>Image App Sample</h1>
+        <p>You must customize this page.</p>
+    </header>
+
+    <section id="greeting">
+        <h2>Welcome</h2>
+    </section>
+
+
+    <section id="login">
+        <h2>Log in (existing account)</h2>
+        <form id="loginForm" action="" method="post">
+            <label>Full Name: <input type="text" name="username"></label>
+            <label>Password: <input type="password" name="password"></label>
+            <input type="submit" value="Log in">
+        </form>
+        <script src="js/login.js"></script>
+    </section>
+
+
+    <section id="signup">
+        <h2>Sign up (create new account)</h2>
+        <form id="signupForm" action="" method="post">
+            <label>Username: <input type="text" name="username"></label>
+            <label>Password: <input type="password" name="password"></label>
+            <input type="submit" value="Sign up">
+        </form>
+        <script src="js/insert_user.js"></script>
+    </section>
+
+    <section id="post">
+        <h2>Drop image here</h2>
+        <section id="drop">
+            <form id="myDropzone" class="dropzone" action="php/upload.php">
+            </form>
+        </section>
+        <script src="js/drop.js"></script>
+    </section>
+
+
+    <section id="gallery">
+        <h2>Gallery</h2><p><a onclick="select_images();" id="selectAll" style="display:none;">select all</a></p>
+        <div id="galleryContainer"></div>
+    </section>
+    <script src="js/select_images.js"></script>
+    <script src="js/select_single.js"></script>
+    <script src="js/insert_comment.js"></script>
+    <script src="js/select_comments.js"></script>
+    <script src="js/insert_like.js"></script>
+    <script src="js/select_likes.js"></script>
+    <script src="js/your_likes.js"></script>
+
+    <script src="js/select_user_images.js"></script>
+
+
+</div><!--wrapper-->
+<script src="js/ui.js"></script>
+</body>
+</html>
